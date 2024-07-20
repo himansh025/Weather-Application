@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.box{
+  border:2px solid white;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 2%;
+  box-shadow:rgba(149,157,165,0.2 )0px 8px 24px ;
+}
+
+.input{
+  border:0px solid rgb(100, 73, 73);
+border-radius: 20px;
+margin: 15px;
+font-size: larger;
+padding: 20px;
+}
+.box {
+  background-color: #827373;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  /* margin-bottom: 0px; */
+  margin: auto;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* background-color: #666; */
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #353131;
+}
+
+.weather-details {
+  margin-left: 20px;
+  text-align: left;
+  color: white;
+}
+
+.temperature {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 16px;
+  color: white;
+
+  
+}
+
+.loading {
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+}
+body{
+  background-image: url(https://th.bing.com/th/id/OIP.j-3RHrSYpPphzuo_5f8tEQHaEK?rs=1&pid=ImgDetMain);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
