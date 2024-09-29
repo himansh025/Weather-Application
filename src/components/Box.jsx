@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { weatherdetails } from '../data/slicer/weatherslicer';
+import { FaTemperatureHigh, FaWind, FaTint, FaSun, FaCloudSun } from "react-icons/fa"; // Importing FontAwesome icons
 
 const Box = () => {
   const dispatch = useDispatch();
@@ -29,20 +30,25 @@ const Box = () => {
             />
             <div className="weather-details text-center">
               <h2 className="temperature text-5xl font-bold text-gray-800">{`${details.main.temp} °C`}</h2>
-              <div className="more-details text-sm text-gray-600 mt-4 space-y-2">
-                <p>
+              <div className="more-details text-sm text-gray-600 mt-4 space-y-3">
+                <p className="flex items-center justify-start">
+                  <FaTemperatureHigh className="text-red-500 mr-2" />
                   <span className="font-semibold">Feels like:</span> {`${details.main.feels_like} °C`}
                 </p>
-                <p>
+                <p className="flex items-center justify-start">
+                  <FaTint className="text-blue-500 mr-2" />
                   <span className="font-semibold">Humidity:</span> {details.main.humidity}%
                 </p>
-                <p>
+                <p className="flex items-center justify-start">
+                  <FaWind className="text-gray-600 mr-2" />
                   <span className="font-semibold">Wind Speed:</span> {details.wind.speed} m/s
                 </p>
-                <p>
+                <p className="flex items-center justify-start">
+                  <FaSun className="text-yellow-500 mr-2" />
                   <span className="font-semibold">Sunrise:</span> {new Date(details.sys.sunrise * 1000).toLocaleTimeString()}
                 </p>
-                <p>
+                <p className="flex items-center justify-start">
+                  <FaCloudSun className="text-orange-400 mr-2" />
                   <span className="font-semibold">Sunset:</span> {new Date(details.sys.sunset * 1000).toLocaleTimeString()}
                 </p>
               </div>
